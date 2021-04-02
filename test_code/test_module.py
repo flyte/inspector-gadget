@@ -1,0 +1,1 @@
+SOMETHING_IN_MODULE = "module"
