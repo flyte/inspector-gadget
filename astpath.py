@@ -38,6 +38,7 @@ def visit_node(ast_node, parent_xml_node=None):
                     visit_node(node, sub_node)
         else:
             node = ET.SubElement(xml_node, key)
+            node.attrib["type"] = type(value).__name__
             node.text = str(value)
 
     return xml_node
